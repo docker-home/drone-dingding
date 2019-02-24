@@ -9,12 +9,14 @@ Put following lines in your .drone.yml
     pipeline:
       notify:
         image: wuyue/drone-dingding
+        secrets: [DING_DING_WEBHOOK_URL]
       build:
         ....
       notify:
         image: wuyue/drone-dingding
+        secrets: [DING_DING_WEBHOOK_URL]
         when:
-          status: [ success, failure ]
+          status: [success, failure]
 
 Set dingding Incoming Webhook URL for notifications
  
